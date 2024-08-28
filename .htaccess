@@ -1,0 +1,17 @@
+# Включить модуль mod_rewrite
+RewriteEngine On
+
+# Запретить отображение списка файлов каталога
+Options -Indexes
+
+# Установить файл index.php как стартовую страницу сайта
+DirectoryIndex index.php
+
+# Определить страницу ошибки 404 (Not Found)
+ErrorDocument 404 /error/404
+
+# Перенаправить все запросы на файл index.php, передавая путь к запрашиваемому файлу или папке в параметре r
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?r=$1
+
