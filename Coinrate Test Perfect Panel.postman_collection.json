@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "3714abbf-daf6-43b7-80e6-9f92dca1bb23",
+		"name": "Coinrate Test Perfect Panel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19245387"
+	},
+	"item": [
+		{
+			"name": "Rates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://166.1.201.227/api/v1?method=rates",
+					"protocol": "http",
+					"host": [
+						"166",
+						"1",
+						"201",
+						"227"
+					],
+					"path": [
+						"api",
+						"v1"
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "rates"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rates With Currency",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://166.1.201.227/api/v1?method=rates",
+					"protocol": "http",
+					"host": [
+						"166",
+						"1",
+						"201",
+						"227"
+					],
+					"path": [
+						"api",
+						"v1"
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "rates"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rates With Invalid Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://166.1.201.227/api/v1?method=rates",
+					"protocol": "http",
+					"host": [
+						"166",
+						"1",
+						"201",
+						"227"
+					],
+					"path": [
+						"api",
+						"v1"
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "rates"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Convert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"method\": \"convert\",\r\n    \"currency_from\": \"BTC\",\r\n    \"currency_to\": \"USD\",\r\n    \"value\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://166.1.201.227/api/v1",
+					"protocol": "http",
+					"host": [
+						"166",
+						"1",
+						"201",
+						"227"
+					],
+					"path": [
+						"api",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "yD2=qao8]V1f0%.Zq>3cH~f}F@wM:8GA#v}w6iT5oeDCikkgM2YZjL#E*=D0UM]f",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
